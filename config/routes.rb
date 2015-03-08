@@ -24,6 +24,10 @@ Rails.application.routes.draw do
 post '/update' => 'blogs#update_all_blogs', as: :update
 post '/newest' => 'blogs#newest_entries', as: :newest
 
+devise_for :users, controllers: {
+  sessions: 'sessions'
+}
+
  # scope '/blogs' do
  #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
  # end
