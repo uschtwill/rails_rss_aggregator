@@ -23,9 +23,9 @@ Rails.application.routes.draw do
 post '/update' => 'blogs#update_all_blogs', as: :update
 post '/newest' => 'blogs#newest_entries', as: :newest
 
- scope '/blogs' do
-   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
- end
+ # scope '/blogs' do
+ #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
+ # end
 
  # resources :entries, only: [:index, :show, :destroy, :update], constraints: {subdomain: 'api'}
 
