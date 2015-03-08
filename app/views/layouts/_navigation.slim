@@ -6,4 +6,6 @@ nav
       / li
       /   =link_to 'All News', entries_path
       li
-        =link_to 'Update', update_all_blogs_path, method: :post
+        =link_to 'Update', update_path, method: :post
+      li
+      =link_to 'Newest', newest_path, method: :post

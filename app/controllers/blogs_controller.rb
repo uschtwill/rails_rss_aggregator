@@ -40,18 +40,26 @@ class BlogsController < ApplicationController
     # redirect_to blog_path(@blog)
   end
 
-  # def download_newest_entries
-  #   @blogs = Blog.all
-  #   @blogs.each do |blog|
-  #     blog.download_newest_entries!(params[:download_entries][:entries_num].to_i)
-  #   end
-  #   redirect_to entries_path
-  # end
+  def download_newest_entries
+    @blogs = Blog.all
+    @blogs.each do |blog|
+      blog.download_newest_entries!(params[:download_entries][:entries_num].to_i)
+    end
+    redirect_to entries_path
+  end
 
   # def update_all_blogs
   #   Blog.update_all_blogs
   #   redirect_to entries_path
   # end
+
+  def newest_entries
+    @blogs = Blog.all
+    @blogs.each do |blog|
+      blog.download_newest_entries!(50)
+    end
+    redirect_to entries_path
+  end
 
   def update_all_blogs
     @blogs = Blog.all
