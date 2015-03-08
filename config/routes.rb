@@ -33,9 +33,11 @@ root 'entries#index'
 post '/update' => 'blogs#update_all_blogs', as: :update
 post '/newest' => 'blogs#newest_entries', as: :newest
 
-devise_for :users, controllers: {
-  sessions: 'sessions'
-}
+namespace :api do 
+  devise_for :users, controllers: {
+    sessions: 'sessions'
+  }
+end
 
  # scope '/blogs' do
  #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
