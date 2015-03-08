@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+ruby '2.2.0'
 gem 'rails', '4.1.1'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -16,6 +17,7 @@ gem 'whenever'
 gem 'thin'
 gem 'slim'
 gem 'binding_of_caller'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
