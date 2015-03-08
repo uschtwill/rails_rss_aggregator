@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: entries
+#
+#  id        :integer          not null, primary key
+#  title     :string(255)
+#  url       :string(255)
+#  author    :string(255)
+#  content   :text
+#  published :datetime
+#  blog_id   :integer
+#
+
 class Entry < ActiveRecord::Base
   belongs_to :blog
 

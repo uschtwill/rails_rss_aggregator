@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: blogs
+#
+#  id         :integer          not null, primary key
+#  url        :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Blog < ActiveRecord::Base
   has_many :entries, dependent: :destroy
 
@@ -39,7 +49,7 @@ class Blog < ActiveRecord::Base
   end
 
   def download_newest_entry!
-    download_newest_entries!(1)[0]
+    download_newest_entries!(50)[0]
   end
 
   def self.update_all_blogs
@@ -49,7 +59,7 @@ class Blog < ActiveRecord::Base
   end
 
   def download_entries_after_blog_create
-    download_newest_entries!(5)
+    download_newest_entries!(500)
   end
 
   private

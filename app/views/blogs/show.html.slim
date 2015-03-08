@@ -3,7 +3,7 @@
   =f.label :entries_num, 'Number of entries to download'
   =f.number_field :entries_num
   =f.submit 'Download'
-%ol
+ol
   -@entries.each do |entry|
-    %li
+    li
       =render 'entries/entry', entry: entry

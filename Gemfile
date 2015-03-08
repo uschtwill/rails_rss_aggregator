@@ -10,8 +10,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+
 gem 'feedjira'
 gem 'whenever'
 gem 'thin'
-gem 'haml-rails'
+gem 'slim'
+gem 'binding_of_caller'
+
+group :development do
+  gem 'better_errors'
+  gem 'spring'
+end
+
+
+gem 'annotate'

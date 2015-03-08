@@ -1,0 +1,9 @@
+nav
+  .nav-wrapper.grey.darken-2
+    a.brand-logo.right[href="#"]
+      | rss.MAGIK
+    ul#nav-mobile.left.hide-on-med-and-down
+      / li
+      /   =link_to 'All News', entries_path
+      li
+        =link_to 'Update', blogs_update_all_blogs_path, method: :post
