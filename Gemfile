@@ -19,6 +19,7 @@ gem 'thin'
 gem 'slim'
 gem 'binding_of_caller'
 gem 'rails_12factor'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
