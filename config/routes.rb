@@ -18,6 +18,7 @@
 #
 
 Rails.application.routes.draw do
+  devise_for :users
  root 'entries#index'
 
 post '/update' => 'blogs#update_all_blogs', as: :update
