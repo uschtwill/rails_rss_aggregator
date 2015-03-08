@@ -56,7 +56,7 @@ class BlogsController < ApplicationController
   def update_all_blogs
     @blogs = Blog.all
     @blogs.each do |blog|
-      blog.download_newest_entries!(50)
+      blog.update_feed!
     end
     redirect_to entries_path
   end
