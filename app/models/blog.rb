@@ -58,6 +58,12 @@ class Blog < ActiveRecord::Base
     end
   end
 
+  def self.fetch_newest_entries_for_all_blogs
+    Blog.all.each do |blog|
+      blog.download_newest_entries!(500)
+    end
+  end
+
   def download_entries_after_blog_create
     download_newest_entries!(500)
   end
