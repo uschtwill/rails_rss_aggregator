@@ -29,8 +29,7 @@
 #
 
 Rails.application.routes.draw do
-  , ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
   root 'entries#index'
 
   post '/update' => 'blogs#update_all_blogs', as: :update
