@@ -21,6 +21,8 @@ gem 'binding_of_caller'
 gem 'rails_12factor'
 gem 'devise'
 gem 'simple_token_authentication'
+gem 'activeadmin', github: 'activeadmin'
+gem 'meta_search'
 
 group :development do
   gem 'better_errors'
