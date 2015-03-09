@@ -11,40 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308171605) do
+ActiveRecord::Schema.define(version: 20150309152037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blogs", force: true do |t|
-    t.string   "url"
+  create_table "blogs", force: :cascade do |t|
+    t.string   "url",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "entries", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.string   "author"
+  create_table "entries", force: :cascade do |t|
+    t.string   "title",     limit: 255
+    t.string   "url",       limit: 255
+    t.string   "author",    limit: 255
     t.text     "content"
     t.datetime "published"
     t.integer  "blog_id"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "entries_users", id: false, force: :cascade do |t|
+    t.integer "user_id",  null: false
+    t.integer "entry_id", null: false
+  end
+
+  add_index "entries_users", ["entry_id"], name: "index_entries_users_on_entry_id", using: :btree
+  add_index "entries_users", ["user_id"], name: "index_entries_users_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "authentication_token"
+    t.string   "authentication_token",   limit: 255
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree

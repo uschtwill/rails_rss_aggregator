@@ -9,5 +9,7 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token
 
+  has_and_belongs_to_many :entries
+
 
 end
