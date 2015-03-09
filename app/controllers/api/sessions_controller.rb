@@ -14,11 +14,20 @@ class Api::SessionsController < Devise::SessionsController
 
   def destroy
     warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
-    current_user.update_column(:authentication_token, nil)
-    render :status => 200,
-           :json => { :success => true,
-                      :info => "Logged out",
-                      :data => {} }
+    # current_user.update_column(:authentication_token, nil)
+    current_user.authentication_token = nil
+    current_user.save!
+    if current_user.authentication_token == nil
+      render :status => 200,
+             :json => { :success => true,
+                        :info => "Successfully logged out: #{current_user.email}",
+                        :data => {} }
+    else
+      render :status => 200,
+              :json => { :success => false,
+                        :info => "Didn't work! Tried to log out: #{current_user.email}",
+                        :data => {} }
+    end
   end
 
   def failure
