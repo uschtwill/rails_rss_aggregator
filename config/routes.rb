@@ -30,12 +30,18 @@
 
 Rails.application.routes.draw do
 
+  # makes root link to an overview of all entries (the main page)
   root 'entries#index'
 
+  # to update all blogs at once (in theory should only add such entries to the database that are not there yet) >> goes and fetches those entries from the blogs
   post '/update' => 'blogs#update_all_blogs', as: :update
+  # populates the entries page by fetching x new entries
   post '/newest' => 'blogs#newest_entries', as: :newest
 
+  # to display all posts of a specific user
+  get 'users/:id/entries' => 'users#entries', :as => :user_posts
 
+  # sets up the api endpoints for user-related interactions
   namespace :api do
     devise_scope :user do
       post 'registrations' => 'registrations#create', :as => 'register'
@@ -44,6 +50,7 @@ Rails.application.routes.draw do
     end
   end
 
+  # sets up general user-related routes (for the web app)
   devise_for :users
   # devise_for :users, controllers: {
   #   sessions: 'sessions'

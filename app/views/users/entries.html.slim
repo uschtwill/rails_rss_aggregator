@@ -1,0 +1,16 @@
+.container
+  ol.white-text
+    - @entries.each do |entry|
+      ul
+        li
+          h4
+            =entry.title
+          p
+            =entry.published
+            br
+            =link_to entry.url, entry.url
+            =entry.author
+          p
+            =entry.content
+          hr
+
