@@ -4,6 +4,8 @@
 #                     root GET    /                              entries#index
 #                   update POST   /update(.:format)              blogs#update_all_blogs
 #                   newest POST   /newest(.:format)              blogs#newest_entries
+#                api_login POST   /api/sessions(.:format)        api/sessions#create
+#               api_logout DELETE /api/sessions(.:format)        api/sessions#destroy
 #         new_user_session GET    /users/sign_in(.:format)       sessions#new
 #             user_session POST   /users/sign_in(.:format)       sessions#create
 #     destroy_user_session DELETE /users/sign_out(.:format)      sessions#destroy
@@ -28,28 +30,36 @@
 
 Rails.application.routes.draw do
   
-root 'entries#index'
+  root 'entries#index'
 
-post '/update' => 'blogs#update_all_blogs', as: :update
-post '/newest' => 'blogs#newest_entries', as: :newest
+  post '/update' => 'blogs#update_all_blogs', as: :update
+  post '/newest' => 'blogs#newest_entries', as: :newest
 
-namespace :api do 
-  devise_for :users, controllers: {
-    sessions: 'sessions'
-  }
-end
 
- # scope '/blogs' do
- #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
- # end
+  namespace :api do
+    devise_scope :user do
+      post 'sessions' => 'sessions#create', :as => 'login'
+      delete 'sessions' => 'sessions#destroy', :as => 'logout'
+    end
+  end
 
- # resources :entries, only: [:index, :show, :destroy, :update], constraints: {subdomain: 'api'}
+  devise_for :users
+  # devise_for :users, controllers: {
+  #   sessions: 'sessions'
+  # }
 
- resources :entries, only: [:index, :show, :destroy, :update]
- # resources :blogs
 
-  # namespace :api, path: '/', constraints: { subdomain: 'api' } do
-  #   resources :entries, only: [:index, :show, :destroy, :update]
-  # end
+   # scope '/blogs' do
+   #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
+   # end
+
+   # resources :entries, only: [:index, :show, :destroy, :update], constraints: {subdomain: 'api'}
+
+   resources :entries, only: [:index, :show, :destroy, :update]
+   # resources :blogs
+
+    # namespace :api, path: '/', constraints: { subdomain: 'api' } do
+    #   resources :entries, only: [:index, :show, :destroy, :update]
+    # end
 
 end
