@@ -12,6 +12,7 @@
 #
 
 class Entry < ActiveRecord::Base
+
   belongs_to :blog
   has_and_belongs_to_many :users
 
@@ -33,4 +34,14 @@ class Entry < ActiveRecord::Base
     return entry.content if entry.content
     return entry.summary if entry.summary
   end
+
+  def add_to_bookmarks!(user, entry)
+    user.entries << entry
+  end
+
+  def add_to_bookmarks!(user, entry)
+    user.entries.destroy(entry.id)
+  end
+
+
 end
