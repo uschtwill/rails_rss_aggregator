@@ -1,4 +1,12 @@
 .container
+  .row.listing-heading
+      .col.s12.m5
+          h3.white-text
+            - if(current_user.id == @user.id)
+              | Your Bookmarks
+            - else
+              | #{current_user.email}'s Bookmarks
+
   ol.white-text
     - @entries.each do |entry|
       ul

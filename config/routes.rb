@@ -4,11 +4,13 @@
 #                     root GET    /                              entries#index
 #                   update POST   /update(.:format)              blogs#update_all_blogs
 #                   newest POST   /newest(.:format)              blogs#newest_entries
+#             user_entries GET    /users/:id/entries(.:format)   users#entries
+#             api_register POST   /api/registrations(.:format)   api/registrations#create
 #                api_login POST   /api/sessions(.:format)        api/sessions#create
 #               api_logout DELETE /api/sessions(.:format)        api/sessions#destroy
-#         new_user_session GET    /users/sign_in(.:format)       sessions#new
-#             user_session POST   /users/sign_in(.:format)       sessions#create
-#     destroy_user_session DELETE /users/sign_out(.:format)      sessions#destroy
+#         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
+#             user_session POST   /users/sign_in(.:format)       devise/sessions#create
+#     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy
 #            user_password POST   /users/password(.:format)      devise/passwords#create
 #        new_user_password GET    /users/password/new(.:format)  devise/passwords#new
 #       edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit
@@ -39,7 +41,10 @@ Rails.application.routes.draw do
   post '/newest' => 'blogs#newest_entries', as: :newest
 
   # to display all posts of a specific user
-  get 'users/:id/entries' => 'users#entries', :as => :user_posts
+  get 'users/:id/entries' => 'users#entries', :as => :user_entries
+
+  # 
+  
 
   # sets up the api endpoints for user-related interactions
   namespace :api do

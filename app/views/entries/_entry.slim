@@ -9,4 +9,10 @@ ul
       =entry.author
     p
       =entry.content
+    / - if (entry.user.id == current_user.id)
+    /   img.padding-top-50px src="/bookmarks.png"
+    / - else
+    /   p
+    /     | not yet bookmarked
+      
     hr

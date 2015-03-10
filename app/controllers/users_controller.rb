@@ -1,4 +1,4 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
 
   def entries
     @user = User.find(params[:id])
