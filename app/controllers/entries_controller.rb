@@ -29,10 +29,10 @@ class EntriesController < ApplicationController
     redirect_to entries_path
   end
 
-  def add_to_bookmarks
+  def add_entry_to_bookmarks
     @entry = Entry.find(params[:id])
     @user = User.find(params[:id])
-    add_to_bookmarks!(@user, @entry)
+    add_entry_to_bookmarks!(@user, @entry)
     redirect_to user_entries_path 
   end
 
