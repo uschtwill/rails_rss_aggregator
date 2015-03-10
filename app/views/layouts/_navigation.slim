@@ -3,21 +3,22 @@ nav
     a.brand-logo.right[href="#"]
       | rss.MAGIK
     ul#nav-mobile.left.hide-on-med-and-down
+      li
+        =link_to 'All Stories', entries_path
       / li
-      /   =link_to 'All News', entries_path
-      li
-        =link_to 'Update', update_path, method: :post
-      li
-        =link_to 'Newest', newest_path, method: :post
+      /   =link_to 'Update', update_path, method: :post
+      / li
+      /   =link_to 'Newest', newest_path, method: :post
       
       - if user_signed_in?
+        li 
+          a.navbar-link(href="/users/#{current_user.id}/entries")
+            | Your Bookmarks
         li
           = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
         li 
           = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
-        li 
-          a.navbar-link(href="/users/#{current_user.id}/entries")
-            | Your Bookmarks
+        
       - else
         li
           = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
