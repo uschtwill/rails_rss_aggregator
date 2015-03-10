@@ -13,6 +13,9 @@
 
 class Entry < ActiveRecord::Base
 
+  validates :url, uniqueness: true
+
+
   belongs_to :blog
   has_and_belongs_to_many :users
 

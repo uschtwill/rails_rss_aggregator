@@ -60,7 +60,7 @@ class Blog < ActiveRecord::Base
 
   def self.fetch_newest_entries_for_all_blogs
     Blog.all.each do |blog|
-      blog.download_newest_entries!(500)
+      blog.download_newest_entries!(50)
     end
   end
 

@@ -8,10 +8,10 @@
 set :environment, "development"
 set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
 
-# every 5.minutes do
-#   ## NEED TO PUT THE WORKING UPDATE METHOD HERE, RIGHT NOW IT JUST CREATES A LOT OF DUPLICATES
-#   rake "fetch_new_entries"
-# end
+every 5.minutes do
+  ## NEED TO PUT THE WORKING UPDATE METHOD HERE, RIGHT NOW IT JUST CREATES A LOT OF DUPLICATES
+  rake "fetch_new_entries"
+end
 
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
