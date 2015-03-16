@@ -1,10 +1,7 @@
 class EntriesController < ApplicationController
 
   def index
-    @entries = Entry.all.order(published: :desc)
-    
-    #ifmodel level pagination does not work:chain the following method to the one above
-    #.page(params[:page]).per(10)
+    @entries = Entry.all.order(published: :desc).page(params[:page]).per(10)
 
     if blog_id = params[:blog_id]
       @entries = @entries.where(blog_id: blog_id)
