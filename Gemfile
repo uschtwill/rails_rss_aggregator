@@ -33,3 +33,4 @@ end
 
 gem 'annotate'
 gem 'kaminari'
+gem 'twitter'
