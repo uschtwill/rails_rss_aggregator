@@ -32,3 +32,4 @@ end
 
 
 gem 'annotate'
+gem 'kaminari'
