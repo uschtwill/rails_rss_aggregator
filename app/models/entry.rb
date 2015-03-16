@@ -18,6 +18,8 @@ class Entry < ActiveRecord::Base
 
   belongs_to :blog
   has_and_belongs_to_many :users
+  
+  paginates_per 10
 
   def self.create_entry_from_feed(entry)
     
