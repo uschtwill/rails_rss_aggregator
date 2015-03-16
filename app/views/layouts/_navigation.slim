@@ -2,6 +2,7 @@ nav
   .nav-wrapper.grey.darken-2
     a.brand-logo.right[href="#"]
       | rss.MAGIK
+
     ul#nav-mobile.left.hide-on-med-and-down
       li
         =link_to 'All Stories', entries_path
@@ -24,3 +25,21 @@ nav
           = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
         li
           = link_to "Login", new_user_session_path, :class => 'navbar-link'
+      li
+        form
+          .input-field
+            input#search[type="text" required]
+            label[for="search"]
+              i.mdi-action-search
+      li
+        = form_for search_path, method: :get do |f|      
+          .input-field      
+            = f.label "Search for"
+            = text_field_tag :q, params[:q], :id => 'search', :type => 'text'
+            
+
+
+    / = form_for search_path, method: :get do |f|      
+    /   .input-field      
+    /     = text_field_tag :q, params[:q], :id => 'search', :type => 'text' required
+    /     = f.label "Search for"
