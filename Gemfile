@@ -33,3 +33,6 @@ end
 
 gem 'annotate'
 gem 'kaminari'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+gem "elasticsearch-persistence", require: 'elasticsearch/persistence/model'
