@@ -1,0 +1,13 @@
+.container
+  h1
+    | Entry Search
+  = form_for search_path, method: :get do |f|
+    p
+      = f.label "Search for"
+      = text_field_tag :q, params[:q]
+      = submit_tag "Go", name: nil
+  ul
+    - @entries.each do |entry|
+      li
+        h3
+          = link_to entry.title, controller: "entries", action: "show", id: entry._id

@@ -63,6 +63,8 @@ Rails.application.routes.draw do
   # }
 
 
+  get 'search', to: 'search#search'
+
    # scope '/blogs' do
    #   post '/:id/download_newest_entries' => 'blogs#download_newest_entries', as: :blog_download_newest_entries
    # end

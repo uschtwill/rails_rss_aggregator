@@ -10,8 +10,12 @@
 #  published :datetime
 #  blog_id   :integer
 #
+# require 'elasticsearch/model'
 
 class Entry < ActiveRecord::Base
+
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 
   validates :url, uniqueness: true
 
@@ -50,3 +54,5 @@ class Entry < ActiveRecord::Base
 
 
 end
+
+Entry.import # for auto sync model with elastic search
