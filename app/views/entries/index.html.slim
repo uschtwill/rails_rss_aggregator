@@ -1,7 +1,8 @@
 .container
   ol.white-text
     - @entries.each do |entry|
-      HTML_TRUNCATOR.truncate("entry.title" , 140)
+      HTML_Truncator.self_closing_tags.delete "img"
+      HTML_TRUNCATOR.truncate(entry.title , 140)
       li
       
         =render 'entry', entry: entry
