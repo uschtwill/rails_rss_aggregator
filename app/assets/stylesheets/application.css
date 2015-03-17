@@ -16,14 +16,38 @@
 
 
 body {
-  background-color: black
+  background-color: white;
 }
 
+@font-face {
+  font-family: "Traveling Typewriter";
+  src: url("font/TravelingTypewriter.ttf");
+  font-weight: normal;
+    font-style: normal; }
+@font-face {
+  font-family: "Segoe UI";
+  src: url("font/segoeui.ttf");
+   font-weight: normal;
+    font-style: normal; }
+@font-face {
+  font-family: "Century Schoolbook";
+  src: url("font/CENSCBK.ttf");
+  font-weight: normal;
+    font-style: normal; }
+
 h1,h2,h3,h4,h5,p {
-  color: white;
+  color: black;
+  
 }
 
 img {
   max-width: 100%;
   max-height: auto;
+}
+#headline{
+  font-family: "Segoe UI", sans-serif;
+  color: yellow;
+}
+#entries{
+  font: "Segoe UI", sans-serif;
 }
