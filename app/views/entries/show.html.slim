@@ -1,1 +1,16 @@
-=render 'entry', entry: @entry
+.container
+  .white-text
+    h4
+      =@entry.title
+    p
+      =@entry.published
+      br
+      =@entry.author
+    p
+      =raw @entry.content
+      br
+      =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post
+      br
+      | Originally posted at: 
+      =link_to @entry.url, @entry.url
+
