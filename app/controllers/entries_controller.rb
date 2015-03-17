@@ -20,7 +20,7 @@ class EntriesController < ApplicationController
     respond_to do |format|
        format.json { render json: @entry, status: 200 }
        format.xml { render json: @entry, status: 200 }
-       format.html { render :index }
+       format.html { render :show }
     end
   end
 

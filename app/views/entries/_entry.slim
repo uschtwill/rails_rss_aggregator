@@ -5,11 +5,15 @@ ul
     p
       =entry.published
       br
-      =link_to entry.url, entry.url
       =entry.author
     p
       =raw HTML_Truncator.truncate(entry.content, 200)
+      =link_to 'Read More', "/entries/#{entry.id}"
+      br
       =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post
+      br
+      | Originally posted at: 
+      =link_to entry.url, entry.url
 
     / - if (entry.user.id == current_user.id)
     /   img.padding-top-50px src="/bookmarks.png"
