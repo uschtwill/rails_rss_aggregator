@@ -36,3 +36,5 @@ gem 'kaminari'
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
 gem "elasticsearch-persistence", require: 'elasticsearch/persistence/model'
+gem 'twitter'
+gem "html_truncator", "~>0.2"
