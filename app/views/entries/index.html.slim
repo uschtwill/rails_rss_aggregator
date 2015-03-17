@@ -1,11 +1,13 @@
 .container
   ol.white-text
     - @entries.each do |entry|
+      
       li
+      
         =render 'entry', entry: entry
         
         
-        
-    p
+       p 
+    
       = paginate @entries
 

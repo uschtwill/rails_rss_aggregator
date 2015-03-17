@@ -33,3 +33,5 @@ end
 
 gem 'annotate'
 gem 'kaminari'
+gem 'twitter'
+gem "html_truncator", "~>0.2"
