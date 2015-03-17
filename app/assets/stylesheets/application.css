@@ -31,7 +31,7 @@ body {
     font-style: normal; }
 @font-face {
   font-family: "Century Schoolbook";
-  src: url("font/CENSCBK.ttf");
+  src: url("font/CENSCBK.TTF");
   font-weight: normal;
     font-style: normal; }
 
@@ -45,9 +45,14 @@ img {
   max-height: auto;
 }
 #headline{
-  font-family: "Segoe UI", sans-serif;
-  color: yellow;
+  font-family: "Century Schoolbook", serif;
+  
 }
 #entries{
-  font: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  
+}
+#datetime{
+  font-family: "Traveling Typewriter", serif;
+  color: grey;
 }
