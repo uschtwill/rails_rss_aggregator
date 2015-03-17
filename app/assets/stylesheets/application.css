@@ -19,6 +19,19 @@ body {
   background-color: black
 }
 
+@font-face {
+  font-family: "Traveling Typewriter";
+  src: url("font/TravelingTypewriter.ttf");
+  font-weight: 200; }
+@font-face {
+  font-family: "Segoe UI";
+  src: url("font/segoeui.ttf");
+  font-weight: 200; }
+@font-face {
+  font-family: "Century Schoolbook";
+  src: url("font/CENSCBK.ttf");
+  font-weight: 200; }
+
 h1,h2,h3,h4,h5,p {
   color: white;
 }
