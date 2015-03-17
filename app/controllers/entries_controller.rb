@@ -30,18 +30,4 @@ class EntriesController < ApplicationController
     redirect_to entries_path
   end
 
-  def add_entry_to_bookmarks
-    @entry = Entry.find(params[:id])
-    @user = User.find(params[:id])
-    add_entry_to_bookmarks!(@user, @entry)
-    redirect_to user_entries_path 
-  end
-
-  def remove_from_bookmarks
-    @entry = Entry.find(params[:id])
-    @user = current_user.id
-    @user.remove_from_bookmarks!(@user, @entry)
-    redirect_to user_entries_path 
-  end
-
 end

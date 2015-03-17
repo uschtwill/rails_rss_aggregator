@@ -44,14 +44,6 @@ class Entry < ActiveRecord::Base
     return entry.summary if entry.summary
   end
 
-  def add_entry_to_bookmarks!(user, entry)
-    user.entries << entry
-  end
-
-  def add_to_bookmarks!(user, entry)
-    user.entries.destroy(entry.id)
-  end
-
 
 end
 

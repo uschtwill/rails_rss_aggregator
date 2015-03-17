@@ -45,7 +45,7 @@ Rails.application.routes.draw do
 
   # 
   # post 'users/:id/entries/:id' => 'users#add_entry_to_bookmarks', as => :add_to_bookmarks
-  # delete 'users/:id/entries/:id' => 'entries#remove_from_bookmarks', as => :remove_from_bookmarks
+  # delete 'users/:id/entries/:id' => 'users#remove_entry_from_bookmarks', as => :remove_from_bookmarks
 
   # sets up the api endpoints for user-related interactions
   namespace :api do

@@ -1,9 +1,9 @@
 .container
   h1
     | Entry Search
-  = form_for search_path, method: :get do |f|
+  = form_tag search_path, method: :get do |f|
     p
-      = f.label "Search for"
+      = label_tag "Search for"
       = text_field_tag :q, params[:q]
       = submit_tag "Go", name: nil
   ul
