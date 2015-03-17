@@ -86,6 +86,8 @@ GEM
       activesupport (>= 4.1.0)
     hike (1.2.3)
     hitimes (1.2.2)
+    html_truncator (0.4.1)
+      nokogiri (~> 1.5)
     http (0.6.3)
       http_parser.rb (~> 0.6.0)
     http_parser.rb (0.6.0)
@@ -235,6 +237,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   feedjira
+  html_truncator (~> 0.2)
   jbuilder (~> 2.0)
   jquery-rails
   kaminari

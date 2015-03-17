@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all.order(published: :desc).page(params[:page]).per(10)
-    Twitter.update(@entry.title.tweet)
+    
 
     if blog_id = params[:blog_id]
       @entries = @entries.where(blog_id: blog_id)
@@ -13,6 +13,8 @@ class EntriesController < ApplicationController
        format.xml { render json: @entries, status: 200 }
        format.html { render :index }
     end
+    
+    
   end
 
   def show
