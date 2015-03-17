@@ -1,11 +1,13 @@
 .container
   ol.white-text
     - @entries.each do |entry|
+      HTML_TRUNCATOR.truncate("entry.title" , 140)
       li
+      
         =render 'entry', entry: entry
         
         
         
-    p
+    
       = paginate @entries
 
