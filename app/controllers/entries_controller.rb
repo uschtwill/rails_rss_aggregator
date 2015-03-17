@@ -2,8 +2,6 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all.order(published: :desc).page(params[:page]).per(10)
-   
-    
 
     if blog_id = params[:blog_id]
       @entries = @entries.where(blog_id: blog_id)
@@ -13,12 +11,7 @@ class EntriesController < ApplicationController
        format.json { render json: @entries, status: 200 }
        format.xml { render json: @entries, status: 200 }
        format.html { render :index }
-    end
-    
-     @entry = Entry.find(params[:id])
-      HTML_Truncator.self_closing_tags.delete "img"
-      HTML_TRUNCATOR.truncate(@entry.content , 140)
-    
+    end   
     
   end
 
