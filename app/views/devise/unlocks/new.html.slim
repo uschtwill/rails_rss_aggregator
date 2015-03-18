@@ -1,11 +1,11 @@
-h2
+h2 id = "headline"
   | Resend unlock instructions
 = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
   = devise_error_messages!
-  .field
+  .field id = "entries"
     = f.label :email
     br
     = f.email_field :email, autofocus: true
-  .actions
+  .actions id = "entries"
     = f.submit "Resend unlock instructions"
 = render "devise/shared/links"

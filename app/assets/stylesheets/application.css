@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+*= require social-share-button
  */
 
+*= require social-share-button
 
 body {
   background-color: white;
@@ -24,6 +26,7 @@ body {
   src: url("font/TravelingTypewriter.ttf");
   font-weight: normal;
     font-style: normal; }
+
 @font-face {
   font-family: "Segoe UI";
   src: url("font/segoeui.ttf");
@@ -31,7 +34,17 @@ body {
     font-style: normal; }
 @font-face {
   font-family: "Century Schoolbook";
-  src: url("font/CENSCBK.ttf");
+  src: url("font/CENSCBK.TTF");
+  font-weight: normal;
+    font-style: normal; }
+@font-face {
+  font-family: "Impact";
+  src: url("font/impact.ttf");
+  font-weight: normal;
+    font-style: normal; }
+@font-face {
+  font-family: "Haettenschweiler";
+  src: url("font/HATTEN.TTF");
   font-weight: normal;
     font-style: normal; }
 
@@ -45,9 +58,21 @@ img {
   max-height: auto;
 }
 #headline{
+  font-family: "Haettenschweiler", sans-serif;
+  
+}
+#navbar{
   font-family: "Segoe UI", sans-serif;
-  color: yellow;
+  
+  
+  
 }
 #entries{
-  font: "Segoe UI", sans-serif;
+  font-family: "Century Schoolbook", serif;
+  font-size: 18px;
+  
+}
+#datetime{
+  font-family: "Traveling_Typewriter", serif;
+  color: grey;
 }

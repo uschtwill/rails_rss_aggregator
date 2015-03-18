@@ -1,12 +1,12 @@
 ul
   li
-    h4
+    h4 id = "headline"
       =entry.title
-    p
+    p id = "datetime"
       =entry.published
       br
       =entry.author
-    p
+    p id = "entries"
       =raw HTML_Truncator.truncate(entry.content, 200)
       =link_to 'Read More', "/entries/#{entry.id}"
       br
