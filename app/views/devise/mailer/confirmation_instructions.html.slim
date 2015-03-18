@@ -1,8 +1,8 @@
-p
+p id = "entries"
   | Welcome 
   = @email
   | !
-p
+p id = "entries"
   | You can confirm your account email through the link below:
-p
+p id = "entries"
   = link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)

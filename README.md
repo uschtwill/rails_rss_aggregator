@@ -14,8 +14,8 @@
 
 ####To install:
 * clone repository
-* install and run Redis (http://redis.io/topics/quickstart)
-* install and run Elasticsearch (http://www.elastic.co/guide/en/elasticsearch/reference/master/setup.html)
+* install and run Redis (http://redis.io/topics/quickstart). On Nitrous, navigate to Autoparts > Manage Packages. Search for Redis and follow installation instructions.
+* install and run Elasticsearch (http://www.elastic.co/guide/en/elasticsearch/reference/master/setup.html).  On Nitrous, navigate to Autoparts > Manage Packages. Search for Elasticsearch and follow installation instructions.
 * install and run Foreman (http://theforeman.org/manuals/1.7/index.html#3.2.1Installation)
 * go to http://localhost:3000
 * enjoy
