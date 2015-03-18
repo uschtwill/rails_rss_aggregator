@@ -1,13 +1,24 @@
 .container
-  h1
-    | Entry Search
-  = form_tag search_path, method: :get do |f|
-    p
-      = label_tag "Search for"
-      = text_field_tag :q, params[:q]
-      = submit_tag "Go", name: nil
-  ul
-    - @entries.each do |entry|
+  h3
+    | Search Results
+  - @entries.each do |entry|
+    ul
       li
-        h3
-          = link_to entry.title, controller: "entries", action: "show", id: entry._id
+        h4 id = "headline"
+          =entry.title
+        p id = "datetime"
+          =entry.published
+          |  |  
+          =entry.author
+        p id = "entries"
+          - HTML_Truncator.self_closing_tags.delete "img"
+          =raw HTML_Truncator.truncate(entry.content, 50)
+          =link_to 'Read More', "/entries/#{entry.id}"
+          |  | 
+          =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post
+          br
+          | Originally posted at: 
+          =link_to entry.url, entry.url
+        hr
+  p 
+    = paginate @entries 

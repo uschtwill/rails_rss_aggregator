@@ -10,10 +10,12 @@ html
     
     = render 'layouts/navigation'
     br
-    p.notice
-      = notice
-    p.alert
-      = alert
+    - if notice
+      p.alert.alert-success
+        = notice
+    - if alert
+      p.alert.alert-danger
+        = alert
     = yield
 
     footer.page-footer.black id = "footertext"
