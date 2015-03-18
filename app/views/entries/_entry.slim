@@ -8,8 +8,9 @@ ul
       =entry.author
     p id = "entries"
       =raw HTML_Truncator.truncate(entry.content, 200)
-      =link_to 'Read More', "/entries/#{entry.id}"
       br
+      =link_to 'Read More', "/entries/#{entry.id}"
+      p
       =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post
       br
       | Originally posted at: 
