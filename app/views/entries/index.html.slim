@@ -1,7 +1,6 @@
 .container
-  ol.black-text
+  black-text
     - @entries.each do |entry|      
-      li
         = render 'entry', entry: entry
       
     p 
