@@ -35,6 +35,16 @@ body {
   src: url("font/CENSCBK.TTF");
   font-weight: normal;
     font-style: normal; }
+@font-face {
+  font-family: "Impact";
+  src: url("font/impact.ttf");
+  font-weight: normal;
+    font-style: normal; }
+@font-face {
+  font-family: "Haettenschweiler";
+  src: url("font/HATTEN.TTF");
+  font-weight: normal;
+    font-style: normal; }
 
 h1,h2,h3,h4,h5,p {
   color: black;
@@ -46,7 +56,7 @@ img {
   max-height: auto;
 }
 #headline{
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Haettenschweiler", sans-serif;
   
 }
 #navbar{
