@@ -3,6 +3,9 @@ nav id = "navbar"
     a.brand-logo.right[href="#"]
       | Nai:Tech:RSS:Aggr 
 
+    a(href="#" data-activates="mobile-demo" class="button-collapse")
+      i(class="mdi-navigation-menu")
+
     ul#nav-mobile.left.hide-on-med-and-down
       li
         =link_to 'ALL STORIES', entries_path
@@ -32,3 +35,34 @@ nav id = "navbar"
         = form_tag search_path, method: :get do |f|      
           .input-field      
             = text_field_tag :q, params[:q], :id => 'search', :type => 'text', :style => 'padding-left: 5px'
+
+    ul(class="side-nav" id="mobile-demo")
+      li
+        =link_to 'ALL STORIES', entries_path
+      / li
+      /   =link_to 'Update', update_path, method: :post
+      / li
+      /   =link_to 'Newest', newest_path, method: :post
+      
+      - if user_signed_in?
+        li 
+          a.navbar-link(href="/users/#{current_user.id}/entries")
+            | Your Bookmarks
+        li
+          = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
+        li 
+          = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+        
+      - else
+        li
+          = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+        li
+          = link_to "Login", new_user_session_path, :class => 'navbar-link'
+
+      li.black-text(style='height: 32px')
+        | Search for:
+      li
+        = form_tag search_path, method: :get do |f|      
+          .input-field      
+            = text_field_tag :q, params[:q], :id => 'search', :type => 'text', :style => 'padding-left: 5px'
+
