@@ -24,6 +24,7 @@ body {
   src: url("font/TravelingTypewriter.ttf");
   font-weight: normal;
     font-style: normal; }
+
 @font-face {
   font-family: "Segoe UI";
   src: url("font/segoeui.ttf");
@@ -45,14 +46,21 @@ img {
   max-height: auto;
 }
 #headline{
-  font-family: "Century Schoolbook", serif;
-  
-}
-#entries{
   font-family: "Segoe UI", sans-serif;
   
 }
+#navbar{
+  font-family: "Segoe UI", sans-serif;
+  
+  
+  
+}
+#entries{
+  font-family: "Century Schoolbook", serif;
+  font-size: 18px;
+  
+}
 #datetime{
-  font-family: "Traveling Typewriter", serif;
+  font-family: "Traveling_Typewriter", serif;
   color: grey;
 }
