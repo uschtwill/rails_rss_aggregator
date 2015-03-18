@@ -102,5 +102,15 @@ main {
   flex: 1 0 auto;
 }
 
+input#search {
+  line-height: 30px;
+  background-color: rgba(125,125,125,1);
+  font-size: 15px;
+
+}
+
+.input-field {
+  padding-left: 5px;
+}
 
 
