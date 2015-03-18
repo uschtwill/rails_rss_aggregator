@@ -10,7 +10,7 @@ ul
       =raw HTML_Truncator.truncate(entry.content, 200)
       br
       =link_to 'Read More', "/entries/#{entry.id}"
-      p
+      pcd 
       =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post
       br
       | Originally posted at: 

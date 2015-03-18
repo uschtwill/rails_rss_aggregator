@@ -106,6 +106,7 @@ body {
 main {
   flex: 1 0 auto;
 }
+<<<<<<< HEAD
 #footertext{
   font-family: "Segoe UI", sans-serif;
 }
@@ -118,4 +119,18 @@ main {
   font-family: "Century Schoolbook", serif;
  
 }
+=======
+
+input#search {
+  line-height: 30px;
+  background-color: rgba(125,125,125,1);
+  font-size: 15px;
+
+}
+
+.input-field {
+  padding-left: 5px;
+}
+
+>>>>>>> cefc4ecd9e72ccdf3f7c34c6f5e066e21f83e6ee
 
