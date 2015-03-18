@@ -27,7 +27,7 @@ nav
           = link_to "Login", new_user_session_path, :class => 'navbar-link'
 
       li
-        = form_for search_path, method: :get do |f|      
+        = form_tag search_path, method: :get do |f|      
           .input-field      
-            = f.label "Search for"
+            = label_tag "Search for"
             = text_field_tag :q, params[:q], :id => 'search', :type => 'text'
