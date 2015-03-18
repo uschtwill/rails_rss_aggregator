@@ -101,6 +101,8 @@ body {
 main {
   flex: 1 0 auto;
 }
-
+#footertext{
+  font-family: "Segoe UI", sans-serif;
+}
 
 
