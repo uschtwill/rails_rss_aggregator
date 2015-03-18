@@ -76,3 +76,10 @@ img {
   font-family: "Traveling_Typewriter", serif;
   color: grey;
 }
+#titlebar{
+  color: #99ff00;
+  text-align: center;
+  background-color:#202020;
+  margin-bottom: 0;
+  margin-top: 0;
+}
