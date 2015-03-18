@@ -1,11 +1,8 @@
 .container
-  ol.white-text
+  black-text
     - @entries.each do |entry|      
-      li
         = render 'entry', entry: entry
       
+    
     p 
       = paginate @entries
-
-
-

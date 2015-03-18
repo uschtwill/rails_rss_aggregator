@@ -15,7 +15,7 @@
 *= require social-share-button
  */
 
-*= require social-share-button
+
 
 body {
   background-color: white;
@@ -76,6 +76,7 @@ img {
   font-family: "Traveling_Typewriter", serif;
   color: grey;
 }
+
 #titlebar{
   color: #99ff00;
   text-align: center;
@@ -83,3 +84,21 @@ img {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+
+/*Changes color of pagination-footer-thingy*/
+nav.pagination {
+  background-color: rgba(97,97,97,1);
+}
+
+/*This and the next selector change the footer to be sticking to the bottom of the page, if there is almost no content on the page*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
