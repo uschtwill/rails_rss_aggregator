@@ -1,24 +1,31 @@
-.container
-  .black-text
-    h4 id = "headline"
-      =@entry.title
-    p id = "datetime"
-      =@entry.published
-      br
-      =@entry.author
-    p id = "entries"
-      =raw @entry.content
-      br
-      =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post
-      br
-      | Originally posted at: 
-      =link_to @entry.url, @entry.url, :target => "_blank"
-      br
-      =social_share_button_tag(@entry.title)
-      br 
-       = link_to "Back", :back
-           
+.container.black-text
+  h4 id = "headline"
+    =@entry.title
+  p.make-italic id = "datetime"
+    =@entry.published
+    |  |  
+    =@entry.author
+  .format-entries id = "entries"
+    =raw @entry.content
+  p.make-italic
+    | Originally posted at: 
+    =link_to @entry.url, @entry.url
+  =social_share_button_tag(@entry.title)
+  br 
+  =link_to :back, :class => "waves-effect waves-light btn" do
+    i(class="mdi-navigation-arrow-back left")  
+    | BACK
+  
 
-      
-      
+  =link_to "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post, :class => "waves-effect waves-light btn add-15px-to-left-margin" do
+    i(class="mdi-action-bookmark-outline right")  
+    | BOOKMARK
+
+/   <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>button</a>
+/ <a class="waves-effect waves-light btn"><i class="mdi-file-cloud right"></i>button</a>
+  
+         
+
+    
+    
 

@@ -139,7 +139,40 @@ input#search {
   padding-left: 0;
 }
 
+.add-15px-to-left-margin {
+  margin-left: 15px;
+}
+
 .make-italic {
   font-style: italic;
 }
+
+.format-entries > h1 {
+  font-size: 28px;
+}
+
+.format-entries > h2 {
+  font-size: 25px;
+}
+
+.format-entries > h3 {
+  font-size: 23px;
+}
+
+.format-entries > h4 {
+  font-size: 20px;
+}
+
+.format-entries > h5 {
+  font-style: 18px;
+  font-weight: bold;
+}
+
+.format-entries > h6 {
+  font-size: 18px;
+  font-size: italic;
+}
+
+
+
 

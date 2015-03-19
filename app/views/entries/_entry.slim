@@ -14,11 +14,3 @@
   =link_to 'Read More', "/entries/#{entry.id}", :class => 'waves-effect waves-teal btn-flat read-more-button'
   =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post, :class => 'waves-effect waves-teal btn-flat'
 .divider
-
-  / - if (entry.user.id == current_user.id)
-  /   img.padding-top-50px src="/bookmarks.png"
-  / - else
-  /   p
-  /     | not yet bookmarked
-    
-  hr
