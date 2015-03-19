@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
-*= require social-share-button
+ *= require social-share-button
  */
 
 @import "materialize";
@@ -23,28 +23,28 @@ body {
 
 @font-face {
   font-family: "Traveling Typewriter";
-  src: url("font/TravelingTypewriter.ttf");
+  src: url("TravelingTypewriter.ttf");
   font-weight: normal;
     font-style: normal; }
 
 @font-face {
   font-family: "Segoe UI";
-  src: url("font/segoeui.ttf");
+  src: url("segoeui.ttf");
    font-weight: normal;
     font-style: normal; }
 @font-face {
   font-family: "Century Schoolbook";
-  src: url("font/CENSCBK.TTF");
+  src: url("CENSCBK.TTF");
   font-weight: normal;
     font-style: normal; }
 @font-face {
   font-family: "Impact";
-  src: url("font/impact.ttf");
+  src: url("impact.ttf");
   font-weight: normal;
     font-style: normal; }
 @font-face {
   font-family: "Haettenschweiler";
-  src: url("font/HATTEN.TTF");
+  src: url("HATTEN.TTF");
   font-weight: normal;
     font-style: normal; }
 

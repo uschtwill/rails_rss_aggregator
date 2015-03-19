@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require_tree 
 //= require materialize-sprockets
-//=require social-share-button
+//= require social-share-button
 
