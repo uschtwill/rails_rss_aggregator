@@ -17,3 +17,7 @@
 //= require materialize-sprockets
 //= require social-share-button
 
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+})
+
