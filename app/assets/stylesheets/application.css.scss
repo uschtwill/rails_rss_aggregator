@@ -72,6 +72,11 @@ img {
   font-size: 18px;
   
 }
+.entries{
+  font-family: "Century Schoolbook", serif;
+  font-size: 18px;
+  
+}
 #datetime{
   font-family: "Traveling_Typewriter", serif;
   color: grey;
@@ -80,7 +85,7 @@ img {
 #titlebar{
   color: #99ff00;
   text-align: center;
-  background-color:#202020;
+  background-color:#707070;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -101,6 +106,20 @@ body {
 main {
   flex: 1 0 auto;
 }
+<<<<<<< HEAD
+#footertext{
+  font-family: "Segoe UI", sans-serif;
+}
+#logo {
+  color: #007923;
+}
+#readmore{
+  color: orange;
+  font-size:20px;
+  font-family: "Century Schoolbook", serif;
+ 
+}
+=======
 
 input#search {
   line-height: 30px;
@@ -113,4 +132,5 @@ input#search {
   padding-left: 5px;
 }
 
+>>>>>>> cefc4ecd9e72ccdf3f7c34c6f5e066e21f83e6ee
 
