@@ -12,6 +12,7 @@
       p id = "entries"
         - HTML_Truncator.self_closing_tags.delete "img"
         =raw HTML_Truncator.truncate(entry.content, 50)
+        | [...]
       p.make-italic
         | Originally posted at: 
         =link_to entry.url, entry.url

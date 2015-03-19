@@ -1,9 +1,8 @@
-.container
-  black-text
-    h3
-      | All stories
-    - @entries.each do |entry|      
-        = render 'entry', entry: entry
-    
-    p 
-      = paginate @entries
+.container.black-text
+  h3
+    | All stories
+  - @entries.each do |entry|      
+    = render 'entry', entry: entry
+  
+  p 
+    = paginate @entries
