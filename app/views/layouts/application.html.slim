@@ -6,6 +6,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+
     = render 'layouts/navigation'
     br
     - if notice
@@ -16,7 +17,7 @@ html
         = alert
     = yield
 
-    footer.page-footer.black
+    footer.page-footer.black id = "footertext"
       .container
         .row
           .col.l6.s12

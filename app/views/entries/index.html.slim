@@ -4,6 +4,7 @@
       | All stories
     - @entries.each do |entry|      
         = render 'entry', entry: entry
+        = @client.update(entry.title)
     
     p 
       = paginate @entries
