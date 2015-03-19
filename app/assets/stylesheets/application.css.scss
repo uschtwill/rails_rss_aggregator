@@ -21,7 +21,7 @@ body {
   background-color: white;
 }
 
-@font-face {
+/*@font-face {
   font-family: "Traveling Typewriter";
   src: url("TravelingTypewriter.ttf");
   font-weight: normal;
@@ -46,7 +46,7 @@ body {
   font-family: "Haettenschweiler";
   src: url("HATTEN.TTF");
   font-weight: normal;
-    font-style: normal; }
+    font-style: normal; }*/
 
 h1,h2,h3,h4,h5,p {
   color: black;
@@ -57,7 +57,7 @@ img {
   max-width: 100%;
   max-height: auto;
 }
-#headline{
+/*#headline{
   font-family: "Haettenschweiler", sans-serif;
   
 }
@@ -80,7 +80,7 @@ img {
 #datetime{
   font-family: "Traveling_Typewriter", serif;
   color: grey;
-}
+}*/
 
 #titlebar{
   color: #99ff00;
@@ -129,5 +129,17 @@ input#search {
 
 .input-field {
   padding-left: 5px;
+}
+
+.btn-flat {
+  margin-bottom: 0;
+}
+
+.read-more-button {
+  padding-left: 0;
+}
+
+.make-italic {
+  font-style: italic;
 }
 

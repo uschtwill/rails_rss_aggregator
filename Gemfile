@@ -5,7 +5,6 @@ ruby '2.2.0'
 group :development do
   gem 'better_errors'
   gem 'spring'
-  gem 'rails-dev-tweaks'
 end
 
 gem 'rails', '4.2.0'
