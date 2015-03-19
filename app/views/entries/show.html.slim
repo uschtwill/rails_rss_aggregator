@@ -12,7 +12,7 @@
       =link_to 'Add to your Bookmarks', "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post
       br
       | Originally posted at: 
-      =link_to @entry.url, @entry.url
+      =link_to @entry.url, @entry.url, :target => "_blank"
       br
       =social_share_button_tag(@entry.title)
       br 
