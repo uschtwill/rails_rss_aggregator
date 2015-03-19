@@ -64,30 +64,37 @@ img {
   max-width: 100%;
   max-height: auto;
 }
+
+.page-heading {
+  color: #00838f;
+}
+
+ul#nav-mobile.left.hide-on-med-and-down {
+  margin-left: 30px;
+}
+
 /*#headline{
   font-family: "Haettenschweiler", sans-serif;
-  
+}*/
+
+/*#navbar{
+  font-family: "Segoe UI", sans-serif;   
 }
-#navbar{
-  font-family: "Segoe UI", sans-serif;
-  
-  
-  
-}
+
 #entries{
   font-family: "Century Schoolbook", serif;
-  font-size: 18px;
-  
+  font-size: 18px;  
 }
+
 .entries{
   font-family: "Century Schoolbook", serif;
-  font-size: 18px;
-  
+  font-size: 18px;  
 }
+
 #datetime{
   font-family: "Traveling_Typewriter", serif;
   color: grey;
-}*/
+}
 
 #titlebar{
   color: #99ff00;
@@ -127,11 +134,19 @@ main {
  
 }
 
+.padding-left-15px {
+  padding-left: 15px;
+}
+
 input#search {
   line-height: 30px;
   background-color: #00acc1;
   font-size: 15px;
+}
 
+.brand-logo {
+  margin-right: 37.25px;
+  margin-top: 2px;
 }
 
 .input-field {
@@ -180,6 +195,10 @@ input#search {
   font-size: italic;
 }
 
+nav.pagination {
+  width: 205px;
+  padding-left: 20px;
+}
 
 
 

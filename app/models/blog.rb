@@ -64,18 +64,18 @@ class Blog < ActiveRecord::Base
     end
   end
 
-  def push_to_twitter(entry)
+  # def push_to_twitter(entry)
 
-    @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = "OaPIa6c82YEEaFVB8C4WKvWza"
-      config.consumer_secret     = "txb7PCdjv423WIUpBTnGFzMNAPxnt7O69t2k0fDMOjD6J4nXr0"
-      config.access_token        = "3094798869-J4XQ1Ml9H4phtk6fQ5v3df6Go0aPvN8IXkYeplK"
-      config.access_token_secret = "hop2ORt39UtT8JZc94rX5UnGQ0sdwGcjk9Dak3zSmk8tV"
-    end
+  #   @client = Twitter::REST::Client.new do |config|
+  #     config.consumer_key        = "OaPIa6c82YEEaFVB8C4WKvWza"
+  #     config.consumer_secret     = "txb7PCdjv423WIUpBTnGFzMNAPxnt7O69t2k0fDMOjD6J4nXr0"
+  #     config.access_token        = "3094798869-J4XQ1Ml9H4phtk6fQ5v3df6Go0aPvN8IXkYeplK"
+  #     config.access_token_secret = "hop2ORt39UtT8JZc94rX5UnGQ0sdwGcjk9Dak3zSmk8tV"
+  #   end
 
-    @client.update(entry.title)
+  #   @client.update(entry.title)
 
-  end
+  # end
 
   def download_entries_after_blog_create
     download_newest_entries!(500)
@@ -87,9 +87,9 @@ class Blog < ActiveRecord::Base
     db_entry = Entry.create_entry_from_feed(entry)
     db_entry.blog_id = id
     db_entry.save
-    if db_entry.save?
-      push_to_twitter(db_entry)
-    end
+    # if db_entry.save?
+    #   push_to_twitter(db_entry)
+    # end
   end
 
   def download_success

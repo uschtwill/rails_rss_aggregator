@@ -1,10 +1,10 @@
 nav id = "navbar"
   .nav-wrapper.cyan.darken-2
   
-    a.brand-logo.right(style="font-family:'JosefinSans-thin'; font-size: 40px; important!")
+    a.brand-logo.right(style="font-family:'JosefinSans-thin'; font-size: 45px")
       | Nai:Tech:RSS:Aggr 
 
-    a(href="#" data-activates="mobile-demo" class="button-collapse")
+    a(href="#" data-activates="mobile-demo" class="button-collapse padding-left-15px")
       i(class="mdi-navigation-menu")
 
     ul#nav-mobile.left.hide-on-med-and-down
@@ -30,7 +30,7 @@ nav id = "navbar"
         li
           = link_to "Login", new_user_session_path, :class => 'navbar-link'
 
-      li
+      li.padding-left-15px
         | Search for:
       li
         = form_tag search_path, method: :get do |f|      
@@ -60,7 +60,7 @@ nav id = "navbar"
         li
           = link_to "Login", new_user_session_path, :class => 'navbar-link'
 
-      li.black-text(style='height: 32px')
+      li.padding-left-15px
         | Search for:
       li
         = form_tag search_path, method: :get do |f|      
