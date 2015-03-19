@@ -13,9 +13,7 @@ class EntriesController < ApplicationController
        format.xml { render json: @entries, status: 200 }
        format.html { render :index }
     end  
-    
-    
-    
+
   end
 
   def show

@@ -1,24 +1,27 @@
 .container
-  .row.listing-heading
-      .col.s12.m5
-          h3.white-text
-            - if(current_user.id == @user.id)
-              | Your Bookmarks
-            - else
-              | #{current_user.email}'s Bookmarks
+  h3
+    - if(current_user.id == @user.id)
+      | Your Bookmarks
+    - else
+      | #{current_user.email}'s Bookmarks
+  - @entries.each do |entry|
+    .section
+      h4 id = "headline"
+        =entry.title
+      p.make-italic id = "datetime"
+        =entry.published
+        |  |  
+        =entry.author
+      p id = "entries"
+        - HTML_Truncator.self_closing_tags.delete "img"
+        =raw HTML_Truncator.truncate(entry.content, 50)
+        | [...]
+      p.make-italic
+        | Originally posted at: 
+        =link_to entry.url, entry.url, :target => "_blank"
+      =link_to 'Read More', "/entries/#{entry.id}", :class => 'waves-effect waves-teal btn-flat read-more-button'
+      =link_to 'Romove from Bookmarks', "/users/#{current_user.id}/entries/#{entry.id}", :method => :post, :class => 'waves-effect waves-teal btn-flat'
 
-  ol.white-text
-    - @entries.each do |entry|
-      ul
-        li
-          h4
-            =entry.title
-          p
-            =entry.published
-            br
-            =link_to entry.url, entry.url
-            =entry.author
-          p
-            =entry.content
-          hr
-
+    .divider  
+  p 
+    / = paginate @entries

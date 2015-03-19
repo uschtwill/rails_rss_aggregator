@@ -48,6 +48,13 @@ body {
   font-weight: normal;
     font-style: normal; }*/
 
+@font-face {
+  font-family: "JosefinSans-thins";
+  src: url("JosefinSans-thin.ttf");
+  font-weight: normal;
+  font-style: normal; 
+  }
+
 h1,h2,h3,h4,h5,p {
   color: black;
   
@@ -93,7 +100,7 @@ img {
 
 /*Changes color of pagination-footer-thingy*/
 nav.pagination {
-  background-color: rgba(97,97,97,1);
+  background-color: #00838f;
 }
 
 /*This and the next selector change the footer to be sticking to the bottom of the page, if there is almost no content on the page*/
@@ -122,7 +129,7 @@ main {
 
 input#search {
   line-height: 30px;
-  background-color: rgba(125,125,125,1);
+  background-color: #00acc1;
   font-size: 15px;
 
 }

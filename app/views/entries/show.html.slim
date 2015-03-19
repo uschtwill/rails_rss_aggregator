@@ -12,12 +12,12 @@
     =link_to @entry.url, @entry.url
   =social_share_button_tag(@entry.title)
   br 
-  =link_to :back, :class => "waves-effect waves-light btn" do
+  =link_to :back, :class => "waves-effect waves-light btn cyan darken-2" do
     i(class="mdi-navigation-arrow-back left")  
     | BACK
   
 
-  =link_to "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post, :class => "waves-effect waves-light btn add-15px-to-left-margin" do
+  =link_to "/users/#{current_user.id}/entries/#{@entry.id}", :method => :post, :class => "waves-effect waves-light btn add-15px-to-left-margin cyan darken-2" do
     i(class="mdi-action-bookmark-outline right")  
     | BOOKMARK
 
