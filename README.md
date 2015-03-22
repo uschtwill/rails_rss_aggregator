@@ -13,10 +13,14 @@
 * Provides an API with endpoints for all of the above features
 
 ####To install:
+(given that you have Ruby and Rails installed)
 * clone repository
-* install and run Redis (http://redis.io/topics/quickstart). On Nitrous, navigate to Autoparts > Manage Packages. Search for Redis and follow installation instructions.
-* install and run Elasticsearch (http://www.elastic.co/guide/en/elasticsearch/reference/master/setup.html).  On Nitrous, navigate to Autoparts > Manage Packages. Search for Elasticsearch and follow installation instructions.
-* install and run Foreman (http://theforeman.org/manuals/1.7/index.html#3.2.1Installation)
+* ```cd``` into the dircetory and run a ```bundle install```
+* install and run [PostreSQL](http://www.postgresql.org/download/)
+* add some entries (RSS-feeds) to the Blogs-table in the database, the background worker fetches new entries every 5 minutes
+* install and run [Redis](http://redis.io/topics/quickstart). On Nitrous, navigate to Autoparts > Manage Packages. Search for Redis and follow installation instructions.
+* install and run [Elasticsearch](http://www.elastic.co/guide/en/elasticsearch/reference/master/setup.html). On Nitrous, navigate to Autoparts > Manage Packages. Search for Elasticsearch and follow installation instructions.
+* install and run [Foreman](http://theforeman.org/manuals/1.7/index.html#3.2.1Installation)
 * go to http://localhost:3000
 * enjoy
 
