@@ -1,16 +1,14 @@
-Thanks @DavidLemayian for the pointer. :)
+Thanks @DavidLemayian for the pointer thath having a CONTRIBUTION.md would be agood idea. :)
 
 # Contributing
-
 
 
 ## Why to contribute
 Thanks for checking out this document, it means you are at least thinking about contributing to it. As we would like to deploy this RSS aggregator, we really are looking forward to you helping us improve it. 
 
-We believe that it could be a cool project for guys and gals from the Nairuby group to collaborate on have a project together, same goes for the people from the Nairobi JS user group. A
+We believe that it could be a cool project for guys and gals from the Nairuby group to collaborate on have a project together, same goes for the people from the Nairobi JS user group.
 
-dditionally it could be a cool project for people getting started with web development to cut their teeth by making their first contributions and work on areal project. There surely is enough to do.
-
+Additionally it could be a cool project for people getting started with web development to cut their teeth by making their first contributions to something meaningful and work on a real project. There surely is enough to do.
 
 
 ## Things you need to do to get going
@@ -26,7 +24,6 @@ dditionally it could be a cool project for people getting started with web devel
 * enjoy
 
 
-
 ## How to contribute
 * Fork this repository
 * Clone it to you machine
@@ -37,7 +34,7 @@ dditionally it could be a cool project for people getting started with web devel
 * Push to your fork
 * Do a [Pull Request](https://help.github.com/articles/using-pull-requests/)
 
-A good starting point for getting ideas on what to work on is the [issues page](https://github.com/uschtwill/rails_rss_aggregator/issues). Just browse it, let us know what you'd like to work on and we'll make sure it is put aside for you.
+A good starting point for getting ideas on what to work on is the [issues page](https://github.com/uschtwill/rails_rss_aggregator/issues). Just browse it, let us know what you'd like to work on and we'll make sure it is put aside for you. Choose anything that is labeled ```up-for-grabs```.
 
 Here are some ideas:
 * Fancy front-end coded in JS
@@ -47,10 +44,9 @@ Here are some ideas:
 If you just find something buggy or would like to comment on the code, you can also just do that via the issues page. If you're going that route please provide as many information as you can (software-versions, screenshots, error-messages etc.).
 
 
-
 ## Submitting changes
 * Please write clear and concise log messages for your commits.
-* Try to comment your code where possible.
+* Try to comment your code where possible. (So far we haven't really done this ourselves, but I guess it would be a good idea to start doing so.)
 * We will try to get back to you asap, but it might take a day or two.
 * Be sure to finish your implementation properly before doing a Pull Request. Make commits of logical units.
 * Consider starting the commit message with an applicable emoji (I stole this from [here](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) :D ):
@@ -74,4 +70,7 @@ If you just find something buggy or would like to comment on the code, you can a
 ## Coding conventions
 * We indent using two spaces.
 * We use [SLIM](http://http://slim-lang.com/) for all our views.
+
+
+Thanks for reading! :heart::heart::heart:
 
